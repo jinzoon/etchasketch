@@ -1,13 +1,15 @@
-* {
-    outline: 2px solid red;
+*{
+    background-color: rgb(155,188,15);
+}
+
+footer {
+    height: 25vh;
 }
 
 .gridContainer{
     display: flex;
     flex-direction: column;
-     height: 95vh;
-}
+     height: 70vh;
+     outline: 2px dotted rgb(15,56,15);
+    }
 
-.hover{
-    background-color: black;
-}

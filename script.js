@@ -16,21 +16,36 @@ function drawGrid(numberOfSides, gridContainer) {
             newSubDiv.style.flexGrow = "1";
             newSubDiv.id = i+","+x;
 
+            newSubDiv.style.outline = "2px dotted rgb(15,56,15)"
+
             newDiv.appendChild(newSubDiv);
             newSubDiv.addEventListener("mouseenter", () => {
                 if (!newSubDiv.classList.contains(".filledIn")){
-                newSubDiv.style.background= "black";}
+                newSubDiv.style.background= "rgb(139,172,15)";}
             });
 
             
             newSubDiv.addEventListener("mouseleave", () => {
                 if (!newSubDiv.classList.contains(".filledIn")){
-                newSubDiv.style.background= "white";}
+                newSubDiv.style.background= "rgb(155,188,15)";}
             });
 
             newSubDiv.addEventListener("click", () => {
-                newSubDiv.style.background= "green";
+                newSubDiv.style.background= "rgb(48,98,48)";
+                 if (!newSubDiv.classList.contains(".filledIn")){
+                    newSubDiv.style.opacity = ".1";
+                
+                 }
+                 else if (newSubDiv.classList.contains(".filledIn")){
+                    let tempOpacity = Number(newSubDiv.style.opacity);
+                    if (tempOpacity < 1 ){
+                        tempOpacity = tempOpacity + .1;
+                        newSubDiv.style.opacity = tempOpacity.toString();
+                    }
+                 }
                 newSubDiv.classList.add(".filledIn");
+               
+
             });
 
         }
