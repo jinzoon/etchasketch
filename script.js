@@ -15,7 +15,24 @@ function drawGrid(numberOfSides, gridContainer) {
             const newSubDiv = document.createElement("div");
             newSubDiv.style.flexGrow = "1";
             newSubDiv.id = i+","+x;
+
             newDiv.appendChild(newSubDiv);
+            newSubDiv.addEventListener("mouseenter", () => {
+                if (!newSubDiv.classList.contains(".filledIn")){
+                newSubDiv.style.background= "black";}
+            });
+
+            
+            newSubDiv.addEventListener("mouseleave", () => {
+                if (!newSubDiv.classList.contains(".filledIn")){
+                newSubDiv.style.background= "white";}
+            });
+
+            newSubDiv.addEventListener("click", () => {
+                newSubDiv.style.background= "green";
+                newSubDiv.classList.add(".filledIn");
+            });
+
         }
         
     }

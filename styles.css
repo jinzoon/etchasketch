@@ -7,3 +7,7 @@
     flex-direction: column;
      height: 95vh;
 }
+
+.hover{
+    background-color: black;
+}
