@@ -41,18 +41,9 @@ function drawGrid(numberOfSides, gridContainer) {
             newDiv.appendChild(newSubDiv);
             newSubDiv.addEventListener("mouseenter", () => {
                 if (!newSubDiv.classList.contains(".filledIn")){
-                newSubDiv.style.background= "rgb(139,172,15)";}
-            });
-
-            
-            newSubDiv.addEventListener("mouseleave", () => {
+                newSubDiv.style.background= "rgb(48,98,48)";}
+                
                 if (!newSubDiv.classList.contains(".filledIn")){
-                newSubDiv.style.background= "rgb(155,188,15)";}
-            });
-
-            newSubDiv.addEventListener("click", () => {
-                newSubDiv.style.background= "rgb(48,98,48)";
-                 if (!newSubDiv.classList.contains(".filledIn")){
                     newSubDiv.style.opacity = ".1";
                 
                  }
@@ -64,9 +55,10 @@ function drawGrid(numberOfSides, gridContainer) {
                     }
                  }
                 newSubDiv.classList.add(".filledIn");
-               
-
             });
+
+            
+
 
         }
         
