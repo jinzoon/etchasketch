@@ -10,9 +10,11 @@ header {
 }
 
 .gridContainer{
+    justify-self: center;
     display: flex;
     flex-direction: column;
      height: 70vh;
+     aspect-ratio: 1/1;
      outline: 2px dotted rgb(15,56,15);
     }
 
