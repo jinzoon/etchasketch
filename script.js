@@ -40,21 +40,21 @@ function drawGrid(numberOfSides, gridContainer) {
 
             newDiv.appendChild(newSubDiv);
             newSubDiv.addEventListener("mouseenter", () => {
-                if (!newSubDiv.classList.contains(".filledIn")){
+                if (!newSubDiv.classList.contains("filledIn")){
                 newSubDiv.style.background= "rgb(48,98,48)";}
                 
-                if (!newSubDiv.classList.contains(".filledIn")){
+                if (!newSubDiv.classList.contains("filledIn")){
                     newSubDiv.style.opacity = ".1";
                 
                  }
-                 else if (newSubDiv.classList.contains(".filledIn")){
+                 else if (newSubDiv.classList.contains("filledIn")){
                     let tempOpacity = Number(newSubDiv.style.opacity);
                     if (tempOpacity < 1 ){
                         tempOpacity = tempOpacity + .1;
                         newSubDiv.style.opacity = tempOpacity.toString();
                     }
                  }
-                newSubDiv.classList.add(".filledIn");
+                newSubDiv.classList.add("filledIn");
             });
 
             
