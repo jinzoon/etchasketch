@@ -1,6 +1,26 @@
-const numberOfSides = 16;
+//const numberOfSides = 16;
 const gridContainer = document.querySelector(".gridContainer");
-drawGrid(numberOfSides,gridContainer);
+const newGridButton = document.querySelector(".newGridButton");
+
+let requestedSides = 16;
+
+drawGrid(requestedSides,gridContainer);
+
+newGridButton.addEventListener("click",() => {
+    requestedSides = Math.floor(prompt("What size grid would you like (max 100)", 16))
+    while (requestedSides >100 || requestedSides < 1 ||  isNaN(requestedSides) ) {
+        requestedSides = Math.floor(prompt("What size grid would you like (max 100)", 16));}
+    
+    gridContainer.replaceChildren("");
+    drawGrid(requestedSides,gridContainer);
+
+});
+
+
+
+
+
+
 
 
 
