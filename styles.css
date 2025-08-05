@@ -1,0 +1,8 @@
+* {
+    outline: 2px solid red;
+}
+
+.gridContainer{
+    display: flex;
+    flex-direction: column;
+}
